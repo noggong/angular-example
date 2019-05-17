@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'example-angular';
+  rootName = 'NoggongRoot';
+  rootItems = ["Apple", "Cherry", "Orange"];
+
+  onNameChanged(newName) {
+    this.rootName = newName;
+  }
+
+  onItemWasAdded(newItem) {
+    this.rootItems.push(newItem);
+    console.log(this.rootItems);
+  }
 }
